@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>yt-ai-pipeline Policies</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+  :root {
+    --bg: #f5f6f7;
+    --surface: #ffffff;
+    --border: #e1e4e8;
+    --text: #1a1d21;
+    --text-dim: #5c6470;
+    --accent: #3457d5;
+    --accent-soft: rgba(52, 87, 213, 0.08);
+    --serif: 'Source Serif 4', Georgia, serif;
+    --sans: 'IBM Plex Sans', system-ui, sans-serif;
+    --mono: 'IBM Plex Mono', ui-monospace, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14161a; --surface: #1c1f24; --border: #2b2f36;
+      --text: #eceef0; --text-dim: #9aa1ab;
+      --accent: #7d9bff; --accent-soft: rgba(125, 155, 255, 0.12);
+    }
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    margin: 0;
+    padding: 56px 24px 96px;
+    line-height: 1.6;
+  }
+  .page { max-width: 680px; margin: 0 auto; }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 10px;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(28px, 5vw, 36px);
+    line-height: 1.15;
+    margin: 0 0 8px;
+    text-wrap: balance;
+  }
+  .subtitle { color: var(--text-dim); font-size: 15px; margin: 0 0 32px; }
+
+  nav.toc {
+    display: flex;
+    gap: 8px;
+    margin: 0 0 40px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0;
+  }
+  nav.toc a {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--text-dim);
+    text-decoration: none;
+    padding: 8px 4px 12px;
+    border-bottom: 2px solid transparent;
+  }
+  nav.toc a:hover { color: var(--text); }
+
+  section { margin-bottom: 56px; scroll-margin-top: 24px; }
+  section:last-child { margin-bottom: 0; }
+
+  h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 24px;
+    margin: 0 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  h3 {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 16px;
+    margin: 28px 0 10px;
+  }
+  p { margin: 0 0 14px; max-width: 62ch; }
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 6px; max-width: 60ch; }
+
+  .app-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 24px;
+    font-size: 14px;
+    margin: 0 0 24px;
+  }
+  .app-card div { display: flex; flex-direction: column; gap: 2px; }
+  .app-card span.label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+  .app-card code { font-family: var(--mono); font-size: 13px; }
+
+  .scope-list { display: flex; flex-direction: column; gap: 10px; margin: 0 0 14px; }
+  .scope-row {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 10px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    font-size: 14px;
+  }
+  .scope-row code {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+  .scope-row span { color: var(--text-dim); text-align: right; }
+
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--text-dim);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="page">
+  <p class="eyebrow">yt-ai-pipeline &middot; effective September 16, 2026</p>
+  <h1>Terms &amp; Privacy</h1>
+  <p class="subtitle">A personal, single-operator content pipeline. Not a public product.</p>
+
+  <div class="app-card">
+    <div><span class="label">Operator</span>Josef Tesařík</div>
+    <div><span class="label">Contact</span><code>superdogvideo@gmail.com</code></div>
+    <div><span class="label">Connected platforms</span>YouTube, TikTok, Instagram</div>
+  </div>
+
+  <nav class="toc">
+    <a href="#terms">Terms of Service</a>
+    <a href="#privacy">Privacy Policy</a>
+  </nav>
+
+  <section id="terms">
+    <h2>Terms of Service</h2>
+
+    <p>yt-ai-pipeline is a local automation pipeline built and run by a single
+    individual to produce and publish short-form video content to that
+    individual's own social media accounts. It is not distributed, sold, or
+    made available to any other user, and no one other than the operator
+    authenticates against it.</p>
+
+    <h3>What it does</h3>
+    <p>The pipeline generates video scripts, narration, and imagery locally,
+    assembles them into finished videos, and - where a platform's API and the
+    operator's authorization allow it - publishes those videos directly to
+    the operator's own channel or account.</p>
+
+    <h3>Scope of use</h3>
+    <ul>
+      <li>Used solely by the operator, on the operator's own machine.</li>
+      <li>Publishes only to accounts the operator owns and has personally
+      authorized via each platform's official OAuth flow.</li>
+      <li>Makes no claims of fitness for any purpose beyond this personal use.</li>
+    </ul>
+
+    <h3>Changes</h3>
+    <p>Since this is a personal tool rather than a distributed product, these
+    terms change whenever the pipeline's own use changes. The date at the top
+    of this page reflects the last revision.</p>
+  </section>
+
+  <section id="privacy">
+    <h2>Privacy Policy</h2>
+
+    <p>This pipeline does not collect, process, or share data belonging to
+    anyone other than its operator, and it has no other users.</p>
+
+    <h3>What is stored, and where</h3>
+    <div class="scope-list">
+      <div class="scope-row">
+        <code>OAuth access &amp; refresh tokens</code>
+        <span>Stored locally on the operator's own machine, used only to publish to the operator's own accounts</span>
+      </div>
+      <div class="scope-row">
+        <code>video.publish</code> <span style="text-align:left; flex:1">(TikTok)</span>
+        <span>Publishes a video the operator generated to the operator's own TikTok profile</span>
+      </div>
+      <div class="scope-row">
+        <code>youtube.upload</code> <span style="text-align:left; flex:1">(YouTube)</span>
+        <span>Uploads a video the operator generated to the operator's own YouTube channel</span>
+      </div>
+      <div class="scope-row">
+        <code>instagram_business_content_publish</code> <span style="text-align:left; flex:1">(Instagram)</span>
+        <span>Publishes a video the operator generated to the operator's own Instagram account</span>
+      </div>
+    </div>
+
+    <h3>What is never collected</h3>
+    <ul>
+      <li>No data from any third party or platform viewer.</li>
+      <li>No analytics, tracking, or advertising identifiers.</li>
+      <li>Nothing is sold, shared, or transferred to any other party.</li>
+    </ul>
+
+    <h3>Deleting data</h3>
+    <p>Because everything lives on the operator's own machine, deleting the
+    stored token files removes all locally held credentials. Revoking access
+    from within TikTok's, YouTube's, or Meta's own account settings
+    additionally invalidates them on the platform side.</p>
+  </section>
+
+  <footer>
+    Questions about either policy: <a href="mailto:superdogvideo@gmail.com">superdogvideo@gmail.com</a>
+  </footer>
+</div>
+</body>
+</html>
